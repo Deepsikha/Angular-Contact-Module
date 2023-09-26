@@ -1,0 +1,78 @@
+$yellow-primary: #ffcc01;
+$yellow-focus: #ecbe06;
+$white: #fff;
+$black: #000;
+$btn-border: #292929;
+$btn-border-secondary: #333;
+
+.btn.btn-primary {
+	background-color: $yellow-primary;
+	border: 1px solid $yellow-primary;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+	background-color: $yellow-focus !important;
+	border: 1px solid $yellow-focus !important;
+}
+
+.example-section {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	height: 60px;
+}
+
+.primary-ebtn {
+	color: $white !important;
+	text-transform: none;
+	font-weight: 700;
+	//display: block;
+	border: 1px solid $btn-border;
+	font-size: 14px;
+	background-color: $btn-border;
+	text-decoration: none !important;
+	text-align: center !important;
+}
+
+.primary-ebtn:hover {
+	opacity: 0.5;
+}
+
+.secondary-ebtn {
+	text-transform: none;
+	font-weight: 700;
+	//display: block;
+	background: $white;
+	font-size: 14px;
+	border: 1px solid $btn-border-secondary;
+	color: $btn-border-secondary !important;
+	text-decoration: none !important;
+	text-align: center !important;
+}
+
+.secondary-ebtn:hover {
+	opacity: 0.5;
+}
+
+:host ::ng-deep {
+	.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+		background-color: $btn-border;
+	}
+
+	.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+		background-color: rgba(41, 41, 41, 0.54);
+	}
+}
+
+mat-label.font-style {
+	font-size: 14px;
+}
+
+::ng-deep .card-custom .mat-form-field.mat-focused .mat-form-field-ripple {
+	background: $black;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+	bottom: 1.25em;
+}

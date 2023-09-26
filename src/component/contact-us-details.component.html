@@ -1,0 +1,207 @@
+<div
+  class="row"
+  *ngIf="contactUsForm"
+  [formGroup]="contactUsForm"
+>
+  <div class="col-md-12 mt-5 mb-5">
+    <div class="row mt-10">
+      <div class="col-md-3">
+        <mat-label class="font-style">
+          <!-- First Name -->
+          {{ "CONTACT_US_PAGE.LABELS.FIRST_NAME" | transloco }}
+        </mat-label>
+        <mat-form-field class="example-full-width" [floatLabel]="'never'">
+          <input
+            type="text"
+            matInput
+            formControlName="firstName"
+            (keypress)="fromControlsValidationHandler($event, contactUsValidation.ResSpecialCharNum)"
+            (paste)="fromControlsValidationHandler($event, contactUsValidation.PasteSpecialCharNum)"
+            placeholder="{{
+              'CONTACT_US_PAGE.INPUT_PLACEHOLDER.FIRST_NAME' | transloco
+            }}"
+            autocomplete="new-password"
+          />
+        </mat-form-field>
+      </div>
+      <div class="col-md-3">
+        <mat-label class="font-style">
+          <!-- Last Name -->
+          {{ "CONTACT_US_PAGE.LABELS.LATS_NAME" | transloco }}
+        </mat-label>
+        <mat-form-field class="example-full-width" [floatLabel]="'never'">
+          <input
+            type="text"
+            matInput
+            formControlName="lastName"
+            (keypress)="fromControlsValidationHandler($event, contactUsValidation.ResSpecialCharNum)"
+            (paste)="fromControlsValidationHandler($event, contactUsValidation.PasteSpecialCharNum)"
+            placeholder="{{
+              'CONTACT_US_PAGE.INPUT_PLACEHOLDER.LATS_NAME' | transloco
+            }}"
+            autocomplete="new-password"
+          />
+        </mat-form-field>
+      </div>
+      <div class="col-md-3">
+        <mat-label class="font-style">
+          <!-- Company Name -->
+          {{ "CONTACT_US_PAGE.LABELS.COMPANY_NAME" | transloco }}
+        </mat-label>
+        <mat-form-field class="example-full-width" [floatLabel]="'never'">
+          <input
+            type="text"
+            matInput
+            formControlName="companyName"
+            (keypress)="fromControlsValidationHandler($event, contactUsValidation.ResSpecialChar)"
+            (paste)="fromControlsValidationHandler($event, contactUsValidation.PasteSpecialChar)"
+            placeholder="{{
+              'CONTACT_US_PAGE.INPUT_PLACEHOLDER.COMPANY_NAME' | transloco
+            }}"
+            autocomplete="new-password"
+          />
+        </mat-form-field>
+      </div>
+      <div class="col-md-3">
+        <mat-label class="font-style">
+          <!-- Email -->
+          {{ "CONTACT_US_PAGE.LABELS.EMAIL" | transloco }}
+        </mat-label>
+        <mat-form-field class="example-full-width" [floatLabel]="'never'">
+          <input
+            type="email"
+            matInput
+            formControlName="email"
+            placeholder="{{
+              'CONTACT_US_PAGE.INPUT_PLACEHOLDER.EMAIL' | transloco
+            }}"
+            name="email"
+          />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row mt-10">
+      <div class="col-md-3">
+        <mat-label class="font-style">
+          <!-- Industry -->
+          {{ "CONTACT_US_PAGE.LABELS.INDUSTRY" | transloco }}
+        </mat-label>
+        <mat-select
+          formControlName="industry"
+          class="lubricant-select"
+          placeholder="{{
+            'CONTACT_US_PAGE.INPUT_PLACEHOLDER.INDUSTRY' | transloco
+          }}"
+        >
+          <mat-option value="industry">Industry</mat-option>
+          <mat-option value="industry1">Industry 1</mat-option>
+          <mat-option value="industry2">Industry 2</mat-option>
+        </mat-select>
+      </div>
+      <div class="col-md-3">
+        <mat-label class="font-style">
+          <!-- Service Line -->
+          {{ "CONTACT_US_PAGE.LABELS.SERVICE_LINE" | transloco }}
+        </mat-label>
+        <mat-select
+          formControlName="serviceLine"
+          class="lubricant-select"
+          placeholder="{{
+            'CONTACT_US_PAGE.INPUT_PLACEHOLDER.SERVICE_LINE' | transloco
+          }}"
+        >
+          <mat-option value="service">Service Line</mat-option>
+          <mat-option value="service1">Service Line 1</mat-option>
+          <mat-option value="service2">Service Line 2</mat-option>
+        </mat-select>
+      </div>
+      <div class="col-md-3">
+        <mat-label class="font-style">
+          <!-- Country -->
+          {{ "CONTACT_US_PAGE.LABELS.COUNTRY" | transloco }}
+        </mat-label>
+        <mat-select
+          formControlName="country"
+          class="lubricant-select"
+          placeholder="{{
+            'CONTACT_US_PAGE.INPUT_PLACEHOLDER.COUNTRY' | transloco
+          }}"
+        >
+          <ng-container *transloco="let t; read: 'ORG_DETAILS.COUNTRY'">
+            <mat-option
+              value="{{ t(country) }}"
+              *ngFor="let country of countryList"
+            >
+              {{ t(country) }}
+            </mat-option>
+          </ng-container>
+        </mat-select>
+      </div>
+      <div class="col-md-3">
+        <mat-label class="font-style">
+          <!-- Product -->
+          {{ "CONTACT_US_PAGE.LABELS.PRODUCT" | transloco }}
+        </mat-label>
+        <mat-select
+          formControlName="product"
+          class="lubricant-select"
+          placeholder="{{
+            'CONTACT_US_PAGE.INPUT_PLACEHOLDER.PRODUCT' | transloco
+          }}"
+        >
+        <ng-container *transloco="let t; read: 'PRODUCTS'">
+          <mat-option
+            value="{{ t(product) }}"
+            *ngFor="let product of productList"
+          >
+            {{ t(product) }}
+          </mat-option>
+        </ng-container>
+        </mat-select>
+      </div>
+    </div>
+    <div class="row mt-10">
+      <div class="col-md-8">
+        <mat-label class="font-style">
+          <!-- Enquiry Details -->
+          {{ "CONTACT_US_PAGE.LABELS.ENQUIRY_DETAILS" | transloco }}
+        </mat-label>
+        <mat-form-field class="example-full-width" [floatLabel]="'never'">
+          <textarea
+            rows="3"
+            type="text"
+            matInput
+            formControlName="enquiryDetails"
+            (keypress)="fromControlsValidationHandler($event, contactUsValidation.ResSpecialCharExceptHyphen)"
+            (paste)="fromControlsValidationHandler($event, contactUsValidation.PasteSpecialCharExceptHyphen)"
+            placeholder="{{
+              'CONTACT_US_PAGE.INPUT_PLACEHOLDER.ENQUIRY_DETAILS' | transloco
+            }}"
+            autocomplete="new-password"
+          ></textarea>
+        </mat-form-field>
+      </div>
+      <div class="col-md-4">
+        <mat-label class="font-style">
+          <!-- Sign up for newsletter? -->
+          {{ "CONTACT_US_PAGE.LABELS.SIGN_UP_NEWSLETTER" | transloco }}
+        </mat-label>
+        <section class="example-section">
+          <mat-slide-toggle formControlName="newsLetter" class="example-margin">
+          </mat-slide-toggle>
+        </section>
+      </div>
+    </div>
+    <div class="row mt-10">
+      <button
+        type="button"
+        class="btn primary-ebtn mr-3"
+        [disabled]="!contactUsForm.valid"
+        (click)="sendEmail()"
+      >
+        <!-- Send -->
+        {{ "CONTACT_US_PAGE.LABELS.SEND_BUTTON" | transloco }}
+      </button>
+    </div>
+  </div>
+</div>

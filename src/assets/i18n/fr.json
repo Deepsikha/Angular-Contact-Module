@@ -1,0 +1,20 @@
+{
+  "TOAST_MESSAGE": {
+    "MESSAGE": {
+      "CONTACT_US_PAGE_INFO": "Les caractères spéciaux ne sont pas autorisés!",
+      "CONTACT_US_PAGE_SUCCESS": "E-mail envoyé avec succès!",
+      "CONTACT_US_PAGE_ERROR": "Erreur lors de l'envoi d'un e-mail !"
+    },
+    "TITLE": {
+      "INFO": "Info",
+      "ERROR": "Erreur",
+      "SUCCESS": "Succès"
+    }
+  },
+  "EMAIL_TEMPLATES": {
+    "CONTACT_US_EMAIL": {
+      "SUBJECT": "Nouvelle demande du site Web Integrity Assured",
+      "BODY": "<!DOCTYPE html> <html lang='en'> <head> <meta charset='UTF-8'> <meta http-equiv='X-UA-Compatible' content='IE=edge'> <meta name='viewport' content='width=device-width, initial-scale=1.0'> <title>Document</title> </head> <style> @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700'); body { font-family: Roboto, 'Helvetica Neue', sans-serif !important; } </style> <body> <div> <div style='width: fit-content; margin: 0 auto; border-radius: 7px; background: #fff;'> <table width='700' style='margin: 0 auto;'> <tr> <td style='padding: 20px;'> <table width='100%'> <tr> <td> <p style='font-size: 16px;margin: 0;'>Veuillez trouver un nouvel e-mail d'un contact ci-dessous,</p> <div style='padding-top: 10px;'> <table width='100%'> <tr> <td width='25%'> <p style='font-size: 14px;margin: 0;'>Prénom:</p> </td> <td> <p style='font-size: 14px;margin: 0;'>{{ firstName}}</p> </td> </tr> </table> </div> <div style='padding-top: 10px;'> <table width='100%'> <tr> <td width='25%'> <p style='font-size: 14px;margin: 0;'>Nom de famille:</p> </td> <td> <p style='font-size: 14px;margin: 0;'>{{ lastName }}</p> </td> </tr> </table> </div> <div style='padding-top: 10px;'> <table width='100%'> <tr> <td width='25%'> <p style='font-size: 14px;margin: 0;'>Nom de l'entreprise:</p> </td> <td> <p style='font-size: 14px;margin: 0;'>{{ companyName }}</p> </td> </tr> </table> </div> <div style='padding-top: 10px;'> <table width='100%'> <tr> <td width='25%'> <p style='font-size: 14px;margin: 0;'>E-mail:</p> </td> <td> <p style='font-size: 14px;margin: 0;'> {{ email }}</p> </td> </tr> </table> </div> <div style='padding-top: 10px;'> <table width='100%'> <tr> <td width='25%'> <p style='font-size: 14px;margin: 0;'>Industrie:</p> </td> <td> <p style='font-size: 14px;margin: 0;'> {{ industry }} </p> </td> </tr> </table> </div> <div style='padding-top: 10px;'> <table width='100%'> <tr> <td width='25%'> <p style='font-size: 14px;margin: 0;'>Ligne de service:</p> </td> <td> <p style='font-size: 14px;margin: 0;'> {{ serviceLine }} </p> </td> </tr> </table> </div> <div style='padding-top: 10px;'> <table width='100%'> <tr> <td width='25%'> <p style='font-size: 14px;margin: 0;'>Pays:</p> </td> <td> <p style='font-size: 14px;margin: 0;'>{{ country }}</p> </td> </tr> </table> </div> <div style='padding-top: 10px;'> <table width='100%'> <tr> <td width='25%'> <p style='font-size: 14px;margin: 0;'>Produit:</p> </td> <td> <p style='font-size: 14px;margin: 0;'> {{ product }} </p> </td> </tr> </table> </div> <div style='padding-top: 10px;'> <table width='100%'> <tr> <td width='25%'> <p style='font-size: 14px;margin: 0;'>Enquiry Details:</p> </td> <td> <p style='font-size: 14px;margin: 0;'> {{ enquiryDetails }} </p> </td> </tr> </table> </div> <div style='padding-top: 10px;'> <table width='100%'> <tr> <td width='25%'> <p style='font-size: 14px;margin: 0;'>S'inscrire aux Newsletters:</p> </td> <td> <p style='font-size: 14px;margin: 0;'>{{ newsLater }}</p> </td> </tr> </table> </div> <div style='padding-top: 10px;'> <p style='font-size: 14px;margin: 0;'>Salutations,</p> </div> <div style='padding-top: 10px;'> <p style='font-size: 16px;font-weight: 500;margin: 0;'><strong> Équipe d'assistance à l'intégrité assurée par Hydratight</strong> </p> <div style='padding-top: 10px;'> <table width='100%'> <tr> <td width='50%'> <img src= {{ integrityAssuredImg }} style='max-width: 100%;height: auto;'> </td> <td width='50%'> <img src= {{ hydratightImg }} style='max-width: 100%;height: auto;'> </td> </tr> </table> </div> </div> </td> </tr> </table> </td> </tr> </table> </div> </div> </body> </html>"
+    }
+  }
+}
